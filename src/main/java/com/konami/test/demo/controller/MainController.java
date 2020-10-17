@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
+//    With POST we send our request
     @PostMapping(value = "/", consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE}, produces = {MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE})
     public Response printCommand(@RequestParam Request request) {
         return new Response();
