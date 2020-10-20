@@ -4,17 +4,17 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.time.LocalDateTime;
-
+// Creating class fo XML response
 @JacksonXmlRootElement(localName = "Response")
 public class Response {
     @JacksonXmlProperty(isAttribute=true)
-    String status;
+    private String status;
 
     @JacksonXmlProperty(localName = "ticketid")
-    Long ticketId;
+    private Long ticketId;
 
     @JacksonXmlProperty(localName = "datetime")
-    LocalDateTime dateTime;
+    private LocalDateTime dateTime;
 
     public String getStatus() {
         return status;
@@ -24,9 +24,7 @@ public class Response {
         this.status = status;
     }
 
-    public Long getTicketId() {
-        return ticketId;
-    }
+    public Long getTicketId() { return ticketId; }
 
     public void setTicketId(Long ticketId) {
         this.ticketId = ticketId;

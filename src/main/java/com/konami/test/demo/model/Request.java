@@ -2,29 +2,21 @@ package com.konami.test.demo.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-
+// Creating class for XML request
 @JacksonXmlRootElement(localName = "Request")
 public class Request {
 
         @JacksonXmlProperty(isAttribute=true)
-        String command;
+        private String command;
 
         @JacksonXmlProperty
-        Long ticket;
+        private Long ticket;
 
-        public String getCommand() {
-                return command;
-        }
+        public String getCommand() { return command; }
 
-        public void setCommand(String command) {
-                this.command = command;
-        }
+        public void setCommand(String command) { this.command = command; }
 
-        public Long getTicket() {
-                return ticket;
-        }
+        public Long getTicket() { return ticket; }
 
-        public void setTicket(Long ticket) {
-                this.ticket = ticket;
-        }
+        public void setTicket(Long ticket) { this.ticket = ticket; }
 }
